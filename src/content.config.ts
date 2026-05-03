@@ -1,7 +1,8 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const tech = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/tech' }),
   schema: z.object({
     title: z.string().min(1, 'Title is required'),
     author: z.string().min(1, 'Author GitHub handle is required'),
@@ -12,7 +13,7 @@ const tech = defineCollection({
 });
 
 const wellness = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/wellness' }),
   schema: z.object({
     title: z.string().min(1, 'Title is required'),
     author: z.string().min(1, 'Author GitHub handle is required'),

@@ -9,7 +9,7 @@ const articles = (await getCollection('tech')).sort(
 );
 
 const filterableArticles: FilterableArticle[] = articles.map((a) => ({
-  slug: a.slug,
+  slug: a.id,
   title: a.data.title,
   description: a.data.description,
   publishDate: a.data.publishDate.toISOString(),

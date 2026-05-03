@@ -20,15 +20,19 @@ const wellnessArticles = (await getCollection('wellness')).sort(
       class="absolute inset-0 opacity-[0.03]"
       style="background-image: linear-gradient(rgba(50,108,229,1) 1px, transparent 1px), linear-gradient(90deg, rgba(50,108,229,1) 1px, transparent 1px); background-size: 40px 40px;"
       aria-hidden="true"
-    ></div>
+    >
+    </div>
     <!-- Glow -->
     <div
       class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-k8s-blue/10 rounded-full blur-3xl"
       aria-hidden="true"
-    ></div>
+    >
+    </div>
 
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 py-20 sm:py-28 text-center">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-k8s-blue/10 border border-k8s-blue/20 text-k8s-blue-light text-xs font-medium mb-6">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-k8s-blue/10 border border-k8s-blue/20 text-k8s-blue-light text-xs font-medium mb-6"
+      >
         <span class="w-1.5 h-1.5 rounded-full bg-k8s-cyan animate-pulse"></span>
         Community-driven · Open source · Free forever
       </div>
@@ -40,8 +44,8 @@ const wellnessArticles = (await getCollection('wellness')).sort(
       </h1>
 
       <p class="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto mb-10">
-        Deep-dive technical content and honest wellness resources for the engineers who keep
-        the cluster — and themselves — running.
+        Deep-dive technical content and honest wellness resources for the engineers who keep the
+        cluster — and themselves — running.
       </p>
 
       <div class="flex flex-wrap items-center justify-center gap-4">
@@ -49,8 +53,17 @@ const wellnessArticles = (await getCollection('wellness')).sort(
           href="/tech"
           class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-k8s-blue text-white font-semibold hover:bg-k8s-blue-dark transition-colors shadow-lg shadow-blue-500/20"
         >
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
           </svg>
           Explore Technical Articles
         </a>
@@ -60,8 +73,14 @@ const wellnessArticles = (await getCollection('wellness')).sort(
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-surface-elevated text-slate-300 font-semibold border border-surface-border hover:text-white hover:border-slate-600 transition-colors"
         >
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
           </svg>
           Submit an Article
         </a>
@@ -98,7 +117,9 @@ const wellnessArticles = (await getCollection('wellness')).sort(
     <div class="flex items-center justify-between mb-8">
       <div>
         <h2 class="text-2xl font-bold text-slate-100">Technical Articles</h2>
-        <p class="text-sm text-slate-500 mt-1">Deep dives into Kubernetes, networking, security, and platform engineering.</p>
+        <p class="text-sm text-slate-500 mt-1">
+          Deep dives into Kubernetes, networking, security, and platform engineering.
+        </p>
       </div>
       <a
         href="/tech"
@@ -106,24 +127,26 @@ const wellnessArticles = (await getCollection('wellness')).sort(
       >
         View all
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
         </svg>
       </a>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {
-        techArticles.slice(0, 3).map((article) => (
-          <ArticleCard
-            slug={article.slug}
-            title={article.data.title}
-            description={article.data.description}
-            publishDate={article.data.publishDate}
-            type="tech"
-            tags={article.data.tags}
-            author={article.data.author}
-          />
-        ))
+        techArticles
+          .slice(0, 3)
+          .map((article) => (
+            <ArticleCard
+              slug={article.id}
+              title={article.data.title}
+              description={article.data.description}
+              publishDate={article.data.publishDate}
+              type="tech"
+              tags={article.data.tags}
+              author={article.data.author}
+            />
+          ))
       }
     </div>
   </section>
@@ -133,7 +156,9 @@ const wellnessArticles = (await getCollection('wellness')).sort(
     <div class="flex items-center justify-between mb-8">
       <div>
         <h2 class="text-2xl font-bold text-slate-100">Wellness Articles</h2>
-        <p class="text-sm text-slate-500 mt-1">Mental health, physical wellbeing, and sustainable engineering culture.</p>
+        <p class="text-sm text-slate-500 mt-1">
+          Mental health, physical wellbeing, and sustainable engineering culture.
+        </p>
       </div>
       <a
         href="/wellness"
@@ -141,25 +166,27 @@ const wellnessArticles = (await getCollection('wellness')).sort(
       >
         View all
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
         </svg>
       </a>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {
-        wellnessArticles.slice(0, 3).map((article) => (
-          <ArticleCard
-            slug={article.slug}
-            title={article.data.title}
-            description={article.data.description}
-            publishDate={article.data.publishDate}
-            type="wellness"
-            category={article.data.category}
-            author={article.data.author}
-            readingTime={article.data.readingTime}
-          />
-        ))
+        wellnessArticles
+          .slice(0, 3)
+          .map((article) => (
+            <ArticleCard
+              slug={article.id}
+              title={article.data.title}
+              description={article.data.description}
+              publishDate={article.data.publishDate}
+              type="wellness"
+              category={article.data.category}
+              author={article.data.author}
+              readingTime={article.data.readingTime}
+            />
+          ))
       }
     </div>
   </section>
@@ -167,12 +194,10 @@ const wellnessArticles = (await getCollection('wellness')).sort(
   <!-- Contribute CTA -->
   <section class="border-t border-surface-border bg-surface">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16 text-center">
-      <h2 class="text-2xl sm:text-3xl font-bold text-slate-100 mb-4">
-        Write for the community
-      </h2>
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-100 mb-4">Write for the community</h2>
       <p class="text-slate-400 leading-relaxed mb-8 max-w-xl mx-auto">
-        All content is contributed via pull request. If you have deep knowledge in Kubernetes,
-        SRE practices, or engineering wellness — this is your platform.
+        All content is contributed via pull request. If you have deep knowledge in Kubernetes, SRE
+        practices, or engineering wellness — this is your platform.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a
