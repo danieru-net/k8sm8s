@@ -26,7 +26,7 @@ Technical articles live in `src/content/tech/`. Each article is a single Markdow
 
 **Create your file:**
 
-```
+```text
 src/content/tech/your-article-title.md
 ```
 
@@ -47,11 +47,11 @@ Your article content starts here...
 ```
 
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | `title` | string | Specific and descriptive |
 | `author` | string | Your GitHub username (no `@`) |
 | `publishDate` | `YYYY-MM-DD` | Date of publication |
-| `tags` | string array | At least one required. See [common tags](#common-tags) |
+| `tags` | string array | At least one required. See common tags below |
 | `description` | string | ≤ 200 characters. Shown in cards and meta tags |
 
 **Common tags:** `K8s`, `Networking`, `Security`, `RBAC`, `Observability`, `Storage`, `Autoscaling`, `GitOps`, `eBPF`, `Service Mesh`, `CNI`, `Operators`, `CI/CD`, `Compliance`
@@ -76,7 +76,7 @@ description: "A concise description under 200 characters."
 ```
 
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | `title` | string | — |
 | `author` | string | Your GitHub username |
 | `category` | enum | Must be exactly one of: `Mental`, `Physical`, `Burnout` |
@@ -85,6 +85,7 @@ description: "A concise description under 200 characters."
 | `description` | string | ≤ 200 characters |
 
 **Content guidelines for Wellness articles:**
+
 - Write from direct experience where possible
 - Avoid prescriptive medical or clinical advice — frame as "what worked for me/us" or cite evidence
 - Use plain language; assume readers may be exhausted
@@ -106,7 +107,7 @@ description: "A concise description under 200 characters."
 ### Local development commands
 
 | Command | What it does |
-|---|---|
+| --- | --- |
 | `npm run dev` | Start local dev server at `http://localhost:4321` |
 | `npm run build` | Production build (also validates all frontmatter schemas) |
 | `npm run preview` | Preview the production build locally |
@@ -138,6 +139,7 @@ Comments are powered by [Giscus](https://giscus.app), which uses GitHub Discussi
 2. Install the [Giscus GitHub App](https://github.com/apps/giscus) on the repository
 3. Visit [giscus.app](https://giscus.app), configure it for your repo, and copy the generated `data-repo-id` and `data-category-id`
 4. Update `src/consts.ts`:
+
    ```ts
    export const GISCUS_REPO = 'your-org/your-repo';
    export const GISCUS_REPO_ID = 'R_...';
@@ -156,16 +158,17 @@ The site deploys automatically via Netlify. Configuration is in `netlify.toml`.
 - **Rebuild hook** → Netlify rebuilds on every push to `main`
 
 To connect a new Netlify site:
+
 1. Import the repository in the Netlify dashboard
 2. Build command: `npm run build`
 3. Publish directory: `dist`
-4. Node version: `20` (set in `netlify.toml`)
+4. Node version: `22` (set in `netlify.toml`)
 
 ---
 
 ### Project structure
 
-```
+```text
 k8sm8s/
 ├── .github/
 │   ├── workflows/ci.yml        # Markdown lint + build validation
