@@ -1,0 +1,107 @@
+---
+import { GITHUB_REPO_URL } from '../consts';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-surface-border bg-surface-dark mt-auto">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+      <!-- Brand -->
+      <div>
+        <p class="font-bold text-slate-100 mb-2">k8sm8s</p>
+        <p class="text-sm text-slate-500 leading-relaxed">
+          A community resource for engineers navigating technical excellence and human sustainability.
+        </p>
+      </div>
+
+      <!-- Explore -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">Explore</p>
+        <ul class="space-y-2">
+          <li>
+            <a href="/tech" class="text-sm text-slate-400 hover:text-slate-200 transition-colors">
+              Technical Articles
+            </a>
+          </li>
+          <li>
+            <a href="/wellness" class="text-sm text-slate-400 hover:text-slate-200 transition-colors">
+              Wellness Articles
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contribute -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">Contribute</p>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href={`${GITHUB_REPO_URL}/blob/main/README.md`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm text-slate-400 hover:text-slate-200 transition-colors"
+            >
+              How to Contribute
+            </a>
+          </li>
+          <li>
+            <a
+              href={`${GITHUB_REPO_URL}/issues/new`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm text-slate-400 hover:text-slate-200 transition-colors"
+            >
+              Report an Issue
+            </a>
+          </li>
+          <li>
+            <a
+              href={`${GITHUB_REPO_URL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm text-slate-400 hover:text-slate-200 transition-colors"
+            >
+              GitHub Repository
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-surface-border">
+      <p class="text-xs text-slate-600">
+        &copy; {currentYear} k8sm8s contributors. Content licensed under{' '}
+        <a
+          href="https://creativecommons.org/licenses/by/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-slate-400 underline"
+        >
+          CC BY 4.0
+        </a>.
+      </p>
+      <p class="text-xs text-slate-600">
+        Built with{' '}
+        <a
+          href="https://astro.build"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-slate-400 underline"
+        >
+          Astro
+        </a>{' '}
+        &amp; hosted on{' '}
+        <a
+          href="https://netlify.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-slate-400 underline"
+        >
+          Netlify
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>

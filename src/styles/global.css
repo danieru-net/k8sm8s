@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    font-family: Inter, system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface-dark text-slate-200 antialiased;
+  }
+
+  /* Focus ring — accessible, on-brand */
+  :focus-visible {
+    @apply outline-none ring-2 ring-k8s-blue ring-offset-2 ring-offset-surface-dark rounded;
+  }
+
+  /* Scrollbar — subtle dark styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-600;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-k8s-blue/40 text-white;
+  }
+}
+
+@layer components {
+  /* Code block enhancements */
+  .prose pre {
+    @apply border border-surface-border rounded-xl;
+  }
+
+  .prose code:not(pre code) {
+    @apply bg-surface-elevated border border-surface-border rounded px-1.5 py-0.5 text-sm font-mono text-cyan-300;
+    font-weight: 400;
+  }
+
+  /* Inline code in prose — remove the backtick decoration Tailwind adds */
+  .prose code:not(pre code)::before,
+  .prose code:not(pre code)::after {
+    content: none;
+  }
+
+  /* Blockquote accent */
+  .prose blockquote {
+    @apply border-l-4 border-k8s-blue bg-surface rounded-r-lg;
+  }
+
+  /* Tag pill */
+  .tag-pill {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-k8s-blue/10 text-k8s-blue-light border border-k8s-blue/20
+           hover:bg-k8s-blue/20 transition-colors;
+  }
+
+  /* Category pill variants */
+  .tag-pill-mental {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-violet-500/10 text-violet-300 border border-violet-500/20;
+  }
+  .tag-pill-physical {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-emerald-500/10 text-emerald-300 border border-emerald-500/20;
+  }
+  .tag-pill-burnout {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-amber-500/10 text-amber-300 border border-amber-500/20;
+  }
+}

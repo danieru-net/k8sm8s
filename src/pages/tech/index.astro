@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FilterSystem from '../../components/FilterSystem';
+import { getCollection } from 'astro:content';
+import type { FilterableArticle, FilterOption } from '../../components/FilterSystem';
+
+const articles = (await getCollection('tech')).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+
+const filterableArticles: FilterableArticle[] = articles.map((a) => ({
+  slug: a.slug,
+  title: a.data.title,
+  description: a.data.description,
+  publishDate: a.data.publishDate.toISOString(),
+  type: 'tech' as const,
+  tags: a.data.tags,
+  author: a.data.author,
+}));
+
+// Collect unique tags across all tech articles
+const allTags = [...new Set(articles.flatMap((a) => a.data.tags))].sort();
+const filters: FilterOption[] = allTags.map((tag) => ({ label: tag, value: tag }));
+---
+
+<BaseLayout
+  title="Technical Articles"
+  description="Deep dives into Kubernetes, networking, security, observability, and cloud-native platform engineering."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Page header -->
+    <header class="mb-12">
+      <div class="flex items-center gap-2 text-sm text-slate-500 mb-4">
+        <a href="/" class="hover:text-slate-300 transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-slate-400">Technical</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-50 mb-3">Technical Articles</h1>
+      <p class="text-lg text-slate-400 max-w-2xl">
+        Community-contributed deep dives into Kubernetes, networking, security, and cloud-native
+        platform engineering.
+      </p>
+    </header>
+
+    <!-- Filter + articles (React island) -->
+    <FilterSystem client:load articles={filterableArticles} filters={filters} type="tech" />
+  </div>
+</BaseLayout>
