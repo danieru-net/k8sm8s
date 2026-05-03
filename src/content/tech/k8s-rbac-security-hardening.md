@@ -1,9 +1,9 @@
 ---
-title: "RBAC Security Hardening in Production Kubernetes Clusters"
-author: "security-practitioner"
+title: 'RBAC Security Hardening in Production Kubernetes Clusters'
+author: 'security-practitioner'
 publishDate: 2025-01-22
-tags: ["K8s", "Security", "RBAC", "Compliance"]
-description: "How to design a least-privilege RBAC model, audit existing permissions, and avoid the common misconfigurations that lead to cluster compromise."
+tags: ['K8s', 'Security', 'RBAC', 'Compliance']
+description: 'How to design a least-privilege RBAC model, audit existing permissions, and avoid the common misconfigurations that lead to cluster compromise.'
 ---
 
 ## Why RBAC Matters in Kubernetes
@@ -49,9 +49,9 @@ These are the misconfigurations attackers look for immediately after gaining a f
 ```yaml
 # BAD — this is effectively cluster-admin for the namespace
 rules:
-  - apiGroups: ["*"]
-    resources: ["*"]
-    verbs: ["*"]
+  - apiGroups: ['*']
+    resources: ['*']
+    verbs: ['*']
 ```
 
 Search for these with:
@@ -68,10 +68,10 @@ A service account that can `get secrets` in any namespace can read service accou
 ```yaml
 # BETTER — scoped to a single namespace and a name prefix
 rules:
-  - apiGroups: [""]
-    resources: ["secrets"]
-    resourceNames: ["my-app-config", "my-app-tls"]
-    verbs: ["get"]
+  - apiGroups: ['']
+    resources: ['secrets']
+    resourceNames: ['my-app-config', 'my-app-tls']
+    verbs: ['get']
 ```
 
 ### 3. Pod Exec and Attach
@@ -116,10 +116,10 @@ metadata:
   name: payment-processor
   namespace: payments
 rules:
-  - apiGroups: [""]
-    resources: ["configmaps"]
-    resourceNames: ["payment-config"]
-    verbs: ["get", "watch"]
+  - apiGroups: ['']
+    resources: ['configmaps']
+    resourceNames: ['payment-config']
+    verbs: ['get', 'watch']
   # No secrets access — use External Secrets Operator or Vault agent instead
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -158,8 +158,8 @@ volumes:
       sources:
         - serviceAccountToken:
             path: token
-            expirationSeconds: 3600   # 1-hour TTL, rotated automatically
-            audience: "api"
+            expirationSeconds: 3600 # 1-hour TTL, rotated automatically
+            audience: 'api'
 ```
 
 ## Continuous Compliance
@@ -185,11 +185,11 @@ spec:
           - resources:
               kinds: [ClusterRoleBinding]
       validate:
-        message: "cluster-admin must not be bound to user subjects."
+        message: 'cluster-admin must not be bound to user subjects.'
         deny:
           conditions:
             any:
-              - key: "{{ request.object.roleRef.name }}"
+              - key: '{{ request.object.roleRef.name }}'
                 operator: Equals
                 value: cluster-admin
 ```

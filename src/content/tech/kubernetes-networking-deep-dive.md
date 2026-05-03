@@ -1,9 +1,9 @@
 ---
-title: "Kubernetes Networking Deep Dive: CNI Plugins and Network Policies"
-author: "k8s-contributor"
+title: 'Kubernetes Networking Deep Dive: CNI Plugins and Network Policies'
+author: 'k8s-contributor'
 publishDate: 2025-01-15
-tags: ["K8s", "Networking", "CNI", "Security"]
-description: "A comprehensive exploration of CNI plugins, network policies, and designing secure, scalable cluster networking from the ground up."
+tags: ['K8s', 'Networking', 'CNI', 'Security']
+description: 'A comprehensive exploration of CNI plugins, network policies, and designing secure, scalable cluster networking from the ground up.'
 ---
 
 ## Overview
@@ -42,8 +42,8 @@ kind: FelixConfiguration
 metadata:
   name: default
 spec:
-  bpfEnabled: true          # eBPF dataplane for lower latency
-  bpfLogLevel: ""
+  bpfEnabled: true # eBPF dataplane for lower latency
+  bpfLogLevel: ''
   logSeverityScreen: Info
 ```
 
@@ -51,7 +51,7 @@ spec:
 
 ### Cilium
 
-Cilium's eBPF-native architecture means it can enforce policies at the kernel level, bypassing iptables entirely. It also speaks the Kubernetes NetworkPolicy API *and* its own `CiliumNetworkPolicy` CRD for L7 enforcement.
+Cilium's eBPF-native architecture means it can enforce policies at the kernel level, bypassing iptables entirely. It also speaks the Kubernetes NetworkPolicy API _and_ its own `CiliumNetworkPolicy` CRD for L7 enforcement.
 
 ```yaml
 apiVersion: cilium.io/v2
@@ -68,7 +68,7 @@ spec:
             app: api-server
       toPorts:
         - ports:
-            - port: "5432"
+            - port: '5432'
               protocol: TCP
 ```
 
@@ -82,7 +82,7 @@ The simplest option. Flannel uses VXLAN encapsulation to create an overlay netwo
 
 ## Writing Effective Network Policies
 
-The Kubernetes `NetworkPolicy` resource is *deny-everything by default* — but only once you've applied at least one policy to a namespace. Until then, all traffic flows freely.
+The Kubernetes `NetworkPolicy` resource is _deny-everything by default_ — but only once you've applied at least one policy to a namespace. Until then, all traffic flows freely.
 
 ### Step 1: Default Deny All
 
@@ -95,7 +95,7 @@ metadata:
   name: default-deny-all
   namespace: production
 spec:
-  podSelector: {}         # applies to all pods in the namespace
+  podSelector: {} # applies to all pods in the namespace
   policyTypes:
     - Ingress
     - Egress

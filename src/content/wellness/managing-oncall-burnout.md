@@ -1,10 +1,10 @@
 ---
-title: "Managing On-Call Burnout: Strategies for SREs and Platform Engineers"
-author: "sre-practitioner"
-category: "Burnout"
+title: 'Managing On-Call Burnout: Strategies for SREs and Platform Engineers'
+author: 'sre-practitioner'
+category: 'Burnout'
 publishDate: 2025-01-10
 readingTime: 8
-description: "Practical, team-level strategies for preventing and recovering from on-call burnout without sacrificing operational excellence."
+description: 'Practical, team-level strategies for preventing and recovering from on-call burnout without sacrificing operational excellence.'
 ---
 
 ## The Cost Nobody Talks About

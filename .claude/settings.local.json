@@ -4,7 +4,8 @@
       "Bash(chmod +x /Users/daniel/Documents/GitHub/k8sm8s/.husky/pre-commit)",
       "Bash(npm install *)",
       "Bash(npm run *)",
-      "Bash(npx markdownlint-cli *)"
+      "Bash(npx markdownlint-cli *)",
+      "Bash(npx prettier *)"
     ]
   }
 }
