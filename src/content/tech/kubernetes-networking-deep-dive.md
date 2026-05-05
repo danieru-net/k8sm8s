@@ -1,7 +1,7 @@
 ---
 title: 'Kubernetes Networking Deep Dive: CNI Plugins and Network Policies'
-author: 'k8s-contributor'
-publishDate: 2025-01-15
+author: 'danielsilvajobs'
+publishDate: 2026-05-03
 tags: ['K8s', 'Networking', 'CNI', 'Security']
 description: 'A comprehensive exploration of CNI plugins, network policies, and designing secure, scalable cluster networking from the ground up.'
 ---

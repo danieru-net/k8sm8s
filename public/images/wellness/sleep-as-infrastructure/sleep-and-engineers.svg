@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#0f172a" rx="16"/>
+
+  <!-- Stars -->
+  <circle cx="60" cy="40" r="1.5" fill="#94a3b8" opacity="0.6"/>
+  <circle cx="130" cy="25" r="1" fill="#94a3b8" opacity="0.5"/>
+  <circle cx="200" cy="55" r="1.5" fill="#94a3b8" opacity="0.7"/>
+  <circle cx="310" cy="20" r="1" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="420" cy="35" r="1.5" fill="#94a3b8" opacity="0.6"/>
+  <circle cx="530" cy="18" r="1" fill="#94a3b8" opacity="0.5"/>
+  <circle cx="640" cy="44" r="1.5" fill="#94a3b8" opacity="0.7"/>
+  <circle cx="720" cy="28" r="1" fill="#94a3b8" opacity="0.4"/>
+  <circle cx="760" cy="55" r="1.5" fill="#94a3b8" opacity="0.6"/>
+  <circle cx="85" cy="80" r="1" fill="#94a3b8" opacity="0.3"/>
+  <circle cx="475" cy="70" r="1.5" fill="#94a3b8" opacity="0.5"/>
+  <circle cx="680" cy="75" r="1" fill="#94a3b8" opacity="0.4"/>
+
+  <!-- Moon -->
+  <circle cx="680" cy="70" r="36" fill="#1e293b"/>
+  <circle cx="700" cy="55" r="36" fill="#0f172a"/>
+  <circle cx="672" cy="68" r="28" fill="#fbbf24" opacity="0.9"/>
+
+  <!-- Zzz floating -->
+  <text x="580" y="100" font-family="monospace" font-size="28" font-weight="bold" fill="#6366f1" opacity="0.8">z</text>
+  <text x="610" y="72" font-family="monospace" font-size="20" font-weight="bold" fill="#6366f1" opacity="0.6">z</text>
+  <text x="634" y="50" font-family="monospace" font-size="14" font-weight="bold" fill="#6366f1" opacity="0.4">z</text>
+
+  <!-- Desk surface -->
+  <rect x="40" y="270" width="500" height="12" fill="#1e293b" rx="4"/>
+
+  <!-- Monitor stand -->
+  <rect x="218" y="282" width="14" height="40" fill="#334155"/>
+  <rect x="196" y="318" width="58" height="8" fill="#334155" rx="2"/>
+
+  <!-- Monitor -->
+  <rect x="110" y="130" width="230" height="145" fill="#1e293b" rx="8" stroke="#334155" stroke-width="2"/>
+  <!-- Monitor screen - sleeping/dark -->
+  <rect x="118" y="138" width="214" height="129" fill="#0a0f1e" rx="4"/>
+  <!-- Sleeping screen glow -->
+  <rect x="118" y="138" width="214" height="129" fill="#6366f1" rx="4" opacity="0.04"/>
+  <!-- Terminal cursor blinking -->
+  <rect x="140" y="230" width="8" height="14" fill="#6366f1" opacity="0.3"/>
+  <text x="140" y="175" font-family="monospace" font-size="11" fill="#334155">$ kubectl get pods</text>
+  <text x="140" y="192" font-family="monospace" font-size="11" fill="#334155">No resources found.</text>
+  <text x="140" y="209" font-family="monospace" font-size="11" fill="#1e3a5f">$ _</text>
+
+  <!-- Laptop (closed, beside desk) -->
+  <rect x="400" y="230" width="160" height="6" fill="#334155" rx="2"/>
+  <rect x="406" y="236" width="148" height="34" fill="#1e293b" rx="2" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Coffee mug -->
+  <rect x="360" y="240" width="32" height="28" fill="#334155" rx="3"/>
+  <path d="M392 249 Q405 249 405 257 Q405 265 392 265" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <!-- Steam -->
+  <path d="M369 238 Q372 230 369 222" fill="none" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M377 236 Q380 227 377 219" fill="none" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Engineer sleeping on desk -->
+  <!-- Body/arm -->
+  <ellipse cx="190" cy="268" rx="55" ry="14" fill="#1d4ed8" opacity="0.8"/>
+  <!-- Head resting on arms -->
+  <circle cx="190" cy="253" r="22" fill="#fcd9b0"/>
+  <!-- Hair -->
+  <ellipse cx="190" cy="234" rx="22" ry="10" fill="#1e293b"/>
+  <!-- Closed eyes (sleeping) -->
+  <path d="M180 252 Q184 249 188 252" fill="none" stroke="#92400e" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M192 252 Q196 249 200 252" fill="none" stroke="#92400e" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Smile -->
+  <path d="M184 260 Q190 265 196 260" fill="none" stroke="#92400e" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Sleep cycle wave chart -->
+  <rect x="560" y="150" width="200" height="130" fill="#0f172a" rx="8" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="575" y="172" font-family="sans-serif" font-size="10" font-weight="600" fill="#94a3b8" letter-spacing="1">SLEEP STAGES</text>
+  <!-- Axes -->
+  <line x1="578" y1="255" x2="748" y2="255" stroke="#1e293b" stroke-width="1"/>
+  <line x1="578" y1="185" x2="578" y2="255" stroke="#1e293b" stroke-width="1"/>
+  <!-- Labels -->
+  <text x="562" y="195" font-family="monospace" font-size="8" fill="#475569">REM</text>
+  <text x="558" y="215" font-family="monospace" font-size="8" fill="#475569">N2</text>
+  <text x="558" y="235" font-family="monospace" font-size="8" fill="#475569">N3</text>
+  <text x="558" y="253" font-family="monospace" font-size="8" fill="#475569">W</text>
+  <!-- Sleep wave -->
+  <polyline points="582,252 595,230 610,210 625,198 640,210 655,230 665,215 678,198 693,212 708,228 720,215 735,200 748,210" fill="none" stroke="#6366f1" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Time labels -->
+  <text x="580" y="267" font-family="monospace" font-size="7" fill="#334155">10pm</text>
+  <text x="655" y="267" font-family="monospace" font-size="7" fill="#334155">2am</text>
+  <text x="730" y="267" font-family="monospace" font-size="7" fill="#334155">6am</text>
+
+  <!-- Caption -->
+  <text x="400" y="360" font-family="sans-serif" font-size="15" font-weight="600" fill="#e2e8f0" text-anchor="middle">Sleep is infrastructure maintenance — for your brain.</text>
+  <text x="400" y="385" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Engineers who sleep 7–9 hours resolve incidents 40% faster.</text>
+
+  <!-- Decorative bottom line -->
+  <line x1="300" y1="400" x2="500" y2="400" stroke="#6366f1" stroke-width="1" opacity="0.3"/>
+</svg>

@@ -10,6 +10,6 @@ export const GITHUB_DEFAULT_BRANCH = 'main';
 // Giscus discussion settings — run the setup at https://giscus.app to get these values
 // after enabling GitHub Discussions and installing the Giscus app on your repo.
 export const GISCUS_REPO = 'danielsilvajobs/k8sm8s';
-export const GISCUS_REPO_ID = 'REPLACE_WITH_REPO_ID';
+export const GISCUS_REPO_ID = 'R_kgDOSTQxTg';
 export const GISCUS_CATEGORY = 'Article Comments';
-export const GISCUS_CATEGORY_ID = 'REPLACE_WITH_CATEGORY_ID';
+export const GISCUS_CATEGORY_ID = 'DIC_kwDOSTQxTs4C8Qz3';

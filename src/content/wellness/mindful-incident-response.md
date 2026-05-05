@@ -1,8 +1,8 @@
 ---
 title: 'Staying Sharp Under Pressure: Cognitive Load During Incidents'
-author: 'platform-lead'
+author: 'danielsilvajobs'
 category: 'Mental'
-publishDate: 2025-01-18
+publishDate: 2026-05-06
 readingTime: 6
 description: 'How cognitive science explains what happens to your thinking during a production incident, and practical techniques to improve decision quality under stress.'
 ---

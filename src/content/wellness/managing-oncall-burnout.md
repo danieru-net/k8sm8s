@@ -1,8 +1,8 @@
 ---
 title: 'Managing On-Call Burnout: Strategies for SREs and Platform Engineers'
-author: 'sre-practitioner'
+author: 'danielsilvajobs'
 category: 'Burnout'
-publishDate: 2025-01-10
+publishDate: 2026-05-04
 readingTime: 8
 description: 'Practical, team-level strategies for preventing and recovering from on-call burnout without sacrificing operational excellence.'
 ---

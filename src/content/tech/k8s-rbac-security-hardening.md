@@ -1,7 +1,7 @@
 ---
 title: 'RBAC Security Hardening in Production Kubernetes Clusters'
-author: 'security-practitioner'
-publishDate: 2025-01-22
+author: 'danielsilvajobs'
+publishDate: 2026-05-05
 tags: ['K8s', 'Security', 'RBAC', 'Compliance']
 description: 'How to design a least-privilege RBAC model, audit existing permissions, and avoid the common misconfigurations that lead to cluster compromise.'
 ---
