@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://k8sm8s.com/sitemap-index.xml
