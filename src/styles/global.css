@@ -1,6 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-k8s-blue: #326CE5;
+  --color-k8s-blue-dark: #1a4fa0;
+  --color-k8s-blue-light: #5a8ef0;
+  --color-k8s-cyan: #00BCD4;
+  --color-k8s-cyan-dark: #0097a7;
+  --color-surface-dark: #0F1117;
+  --color-surface: #1A1D2E;
+  --color-surface-elevated: #242838;
+  --color-surface-border: #2D3748;
+
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
 
 @layer base {
   :root {
@@ -39,6 +55,21 @@
   /* Selection */
   ::selection {
     @apply bg-k8s-blue/40 text-white;
+  }
+
+  /* Typography prose-invert overrides */
+  .prose-invert {
+    --tw-prose-body: var(--color-slate-300);
+    --tw-prose-headings: var(--color-slate-100);
+    --tw-prose-links: var(--color-sky-400);
+    --tw-prose-bold: var(--color-slate-100);
+    --tw-prose-code: var(--color-cyan-300);
+    --tw-prose-pre-bg: var(--color-slate-900);
+    --tw-prose-quotes: var(--color-slate-400);
+    --tw-prose-quote-borders: var(--color-k8s-blue);
+    --tw-prose-hr: var(--color-slate-700);
+    --tw-prose-th-borders: var(--color-slate-600);
+    --tw-prose-td-borders: var(--color-slate-700);
   }
 }
 
