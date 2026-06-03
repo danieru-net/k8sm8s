@@ -171,34 +171,45 @@ To connect a new Netlify site:
 ```text
 k8sm8s/
 ├── .github/
-│   ├── workflows/ci.yml        # Markdown lint + build validation
-│   └── PULL_REQUEST_TEMPLATE.md
+│   ├── workflows/ci.yml            # Markdown lint + build validation
+│   ├── CODEOWNERS
+│   ├── FUNDING.yml
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── dependabot.yml
+├── public/
+│   ├── images/
+│   │   ├── tech/                   # Article images for tech section
+│   │   └── wellness/               # Article images for wellness section
+│   ├── favicon.svg
+│   └── robots.txt
 ├── src/
 │   ├── components/
-│   │   ├── ArticleCard.astro   # Static article card
-│   │   ├── FilterSystem.tsx    # React island: tag/category filter
+│   │   ├── ArticleCard.astro       # Static article card
+│   │   ├── FilterSystem.tsx        # React island: tag/category filter
 │   │   ├── Footer.astro
-│   │   ├── GiscusComments.tsx  # React island: discussion section
-│   │   ├── Header.astro        # Includes Search island
-│   │   └── Search.tsx          # React island: Fuse.js command palette
+│   │   ├── GiscusComments.tsx      # React island: discussion section
+│   │   ├── Header.astro            # Includes Search island
+│   │   └── Search.tsx              # React island: Fuse.js command palette
 │   ├── content/
-│   │   ├── config.ts           # Zod schemas for both collections
-│   │   ├── tech/               # Technical articles (.md)
-│   │   └── wellness/           # Wellness articles (.md)
+│   │   ├── tech/                   # Technical articles (.md)
+│   │   └── wellness/               # Wellness articles (.md)
 │   ├── layouts/
-│   │   ├── ArticleLayout.astro # Article pages (edit button, Giscus)
-│   │   └── BaseLayout.astro    # Base HTML shell
+│   │   ├── ArticleLayout.astro     # Article pages (edit button, Giscus)
+│   │   └── BaseLayout.astro        # Base HTML shell
 │   ├── pages/
-│   │   ├── index.astro         # Homepage
-│   │   ├── tech/index.astro    # Tech listing
+│   │   ├── index.astro             # Homepage
+│   │   ├── tech/index.astro        # Tech listing
 │   │   ├── tech/[...slug].astro
 │   │   ├── wellness/index.astro
 │   │   └── wellness/[...slug].astro
 │   ├── styles/global.css
-│   └── consts.ts               # Site-wide constants + Giscus config
+│   ├── consts.ts                   # Site-wide constants + Giscus config
+│   ├── content.config.ts           # Zod schemas for both collections
+│   └── env.d.ts
 ├── astro.config.mjs
-├── tailwind.config.mjs
-└── netlify.toml
+├── netlify.toml
+├── package.json
+└── tsconfig.json
 ```
 
 ---
