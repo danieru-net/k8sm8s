@@ -8,7 +8,10 @@
       "Bash(npx prettier *)",
       "Bash(command -v nvm)",
       "Bash(command -v fnm)",
-      "Bash(command -v brew)"
+      "Bash(command -v brew)",
+      "Bash(gh api *)",
+      "Bash(curl -s https://api.github.com/repos/dependabot/fetch-metadata/releases/latest)",
+      "Bash(curl -s https://raw.githubusercontent.com/dependabot/fetch-metadata/main/action.yml)"
     ]
   }
 }
