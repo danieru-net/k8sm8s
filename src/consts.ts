@@ -11,5 +11,5 @@ export const GITHUB_DEFAULT_BRANCH = 'main';
 // after enabling GitHub Discussions and installing the Giscus app on your repo.
 export const GISCUS_REPO = 'danieru-net/k8sm8s';
 export const GISCUS_REPO_ID = 'R_kgDOSTQxTg';
-export const GISCUS_CATEGORY = 'General';
-export const GISCUS_CATEGORY_ID = 'DIC_kwDOSTQxTs4C8Qxn';
+export const GISCUS_CATEGORY = 'Article Comments';
+export const GISCUS_CATEGORY_ID = 'DIC_kwDOSTQxTs4C8Qz3';
