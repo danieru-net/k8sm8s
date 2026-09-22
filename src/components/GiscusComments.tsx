@@ -15,7 +15,7 @@ export default function GiscusComments({
   category,
   categoryId,
   mapping = 'pathname',
-  theme = 'dark_dimmed',
+  theme = 'preferred_color_scheme',
 }: GiscusCommentsProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -36,7 +36,7 @@ export default function GiscusComments({
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
-    script.setAttribute('data-input-position', 'top');
+    script.setAttribute('data-input-position', 'bottom');
     script.setAttribute('data-theme', theme);
     script.setAttribute('data-lang', 'en');
     script.setAttribute('data-loading', 'lazy');
