@@ -7,7 +7,6 @@ description: 'An in-depth look at the most-discussed Kubernetes and cloud-native
 readingTime: 6
 ---
 
-
 ## Komodor Extends AI SRE Reach for Kubernetes to AI Agents - Cloud Native Now
 
 Research drawn from Google News trending this cycle.

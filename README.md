@@ -36,23 +36,22 @@ Use `kebab-case` for the filename. It becomes the article's URL path.
 
 ```yaml
 ---
-title: "Your Article Title"
-author: "your-github-handle"
+title: 'Your Article Title'
+author: 'your-github-handle'
 publishDate: 2025-06-01
-tags: ["K8s", "Networking"]
-description: "A concise description under 200 characters."
+tags: ['K8s', 'Networking']
+description: 'A concise description under 200 characters.'
 ---
-
 Your article content starts here...
 ```
 
-| Field | Type | Notes |
-| --- | --- | --- |
-| `title` | string | Specific and descriptive |
-| `author` | string | Your GitHub username (no `@`) |
-| `publishDate` | `YYYY-MM-DD` | Date of publication |
-| `tags` | string array | At least one required. See common tags below |
-| `description` | string | ≤ 200 characters. Shown in cards and meta tags |
+| Field         | Type         | Notes                                          |
+| ------------- | ------------ | ---------------------------------------------- |
+| `title`       | string       | Specific and descriptive                       |
+| `author`      | string       | Your GitHub username (no `@`)                  |
+| `publishDate` | `YYYY-MM-DD` | Date of publication                            |
+| `tags`        | string array | At least one required. See common tags below   |
+| `description` | string       | ≤ 200 characters. Shown in cards and meta tags |
 
 **Common tags:** `K8s`, `Networking`, `Security`, `RBAC`, `Observability`, `Storage`, `Autoscaling`, `GitOps`, `eBPF`, `Service Mesh`, `CNI`, `Operators`, `CI/CD`, `Compliance`
 
@@ -66,23 +65,23 @@ Wellness articles live in `src/content/wellness/`. Same Markdown format with a d
 
 ```yaml
 ---
-title: "Your Article Title"
-author: "your-github-handle"
-category: "Burnout"
+title: 'Your Article Title'
+author: 'your-github-handle'
+category: 'Burnout'
 publishDate: 2025-06-01
 readingTime: 7
-description: "A concise description under 200 characters."
+description: 'A concise description under 200 characters.'
 ---
 ```
 
-| Field | Type | Notes |
-| --- | --- | --- |
-| `title` | string | — |
-| `author` | string | Your GitHub username |
-| `category` | enum | Must be exactly one of: `Mental`, `Physical`, `Burnout` |
-| `publishDate` | `YYYY-MM-DD` | — |
-| `readingTime` | number | Estimated minutes to read |
-| `description` | string | ≤ 200 characters |
+| Field         | Type         | Notes                                                   |
+| ------------- | ------------ | ------------------------------------------------------- |
+| `title`       | string       | —                                                       |
+| `author`      | string       | Your GitHub username                                    |
+| `category`    | enum         | Must be exactly one of: `Mental`, `Physical`, `Burnout` |
+| `publishDate` | `YYYY-MM-DD` | —                                                       |
+| `readingTime` | number       | Estimated minutes to read                               |
+| `description` | string       | ≤ 200 characters                                        |
 
 **Content guidelines for Wellness articles:**
 
@@ -106,11 +105,11 @@ description: "A concise description under 200 characters."
 
 ### Local development commands
 
-| Command | What it does |
-| --- | --- |
-| `npm run dev` | Start local dev server at `http://localhost:4321` |
-| `npm run build` | Production build (also validates all frontmatter schemas) |
-| `npm run preview` | Preview the production build locally |
+| Command           | What it does                                              |
+| ----------------- | --------------------------------------------------------- |
+| `npm run dev`     | Start local dev server at `http://localhost:4321`         |
+| `npm run build`   | Production build (also validates all frontmatter schemas) |
+| `npm run preview` | Preview the production build locally                      |
 
 **Build as validation:** If your frontmatter is missing required fields or uses wrong types, `npm run build` will fail with a clear Zod error message. Run this before opening a PR.
 
