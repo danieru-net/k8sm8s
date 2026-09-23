@@ -2,7 +2,7 @@
 title: 'Stress Management Strategies for SRE Teams'
 author: 'danielsilvajobs'
 publishDate: 2026-09-23
-category: 'Stress Management Strategies for SRE Teams'
+category: 'Mental'
 tags: ['Wellness', 'Mental Health', 'SRE']
 description: 'Practical strategies for maintaining mental health, preventing burnout, and building resilience in high-pressure engineering roles.'
 readingTime: 5
